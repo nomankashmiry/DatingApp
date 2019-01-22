@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../_services/auth.service';
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-nav',
@@ -19,7 +18,7 @@ export class NavComponent implements OnInit {
     this.authSservice.login(this.model).subscribe(next => {
     console.log('logged in succesfully');
     }, error => {
-    console.log('log failed');
+    console.log(error);
     });
   }
 
