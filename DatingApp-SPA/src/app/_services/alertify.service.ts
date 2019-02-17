@@ -6,6 +6,7 @@ declare let alertify: any;
 @Injectable({
   providedIn: 'root'
 })
+
 export class AlertifyService {
 
 constructor() { }
@@ -33,6 +34,4 @@ warning(message: string) {
 message(message: string) {
   alertify.message(message);
 }
-
-
 }
